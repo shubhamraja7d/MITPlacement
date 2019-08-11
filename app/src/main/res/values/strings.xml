@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MIT Placement</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_setup">SetupActivity</string>
+    <string name="enter_placement_date">Enter Placement Date</string>
+</resources>

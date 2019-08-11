@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "615278781114",
+    "firebase_url": "https://mitplacement-72aed.firebaseio.com",
+    "project_id": "mitplacement-72aed",
+    "storage_bucket": "mitplacement-72aed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615278781114:android:ff5d49100c0d8612",
+        "android_client_info": {
+          "package_name": "com.sr7d.mitplacement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615278781114-h7nvgk5kvf16904tcgcllectqihkqe6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sr7d.mitplacement",
+            "certificate_hash": "90a7fda223f308f36f1f6803fd3b80b006013077"
+          }
+        },
+        {
+          "client_id": "615278781114-5hupbpkagki866snt3b97s8rjbesm238.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzU9Ih2a5QfhvS59Rwh6ciOj6H34R5JiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615278781114-5hupbpkagki866snt3b97s8rjbesm238.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

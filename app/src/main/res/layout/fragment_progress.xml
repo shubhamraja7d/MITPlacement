@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProgressFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/crd_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_elevation"
+            app:cardElevation="@dimen/card_elevation_min"
+            app:cardCornerRadius="@dimen/card_elevation_min"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.timqi.sectorprogressview.ColorfulRingProgressView
+                android:id="@+id/crpv"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/card_elevation"
+                app:bgColor="#e1e1e1"
+                app:fgColorEnd="#ff4800"
+                app:fgColorStart="#ffe400"
+                app:percent="75"
+                app:startAngle="270"
+                app:strokeWidth="21dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_elevation"
+            android:layout_marginLeft="@dimen/card_elevation"
+            android:layout_marginTop="@dimen/card_elevation_min"
+            app:cardCornerRadius="@dimen/card_elevation_min"
+            app:cardElevation="@dimen/card_elevation_min"
+            app:layout_constraintStart_toStartOf="@id/crd_progress"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:background="@color/cardview_shadow_end_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MCA - 2019"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic|bold"
+                android:textSize="25sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/crd_progress_1"
+            android:layout_marginTop="@dimen/card_elevation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crd_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <devlight.io.library.ArcProgressStackView
+                android:id="@+id/apsv"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/card_elevation"
+                app:apsv_rounded="true"
+                app:apsv_shadowed="true"
+                app:apsv_animated="true"
+                app:apsv_dragged="false"
+                app:apsv_leveled="true"
+                app:apsv_typeface="fonts/agency.ttf"
+                app:apsv_text_color="#fff"
+                app:apsv_shadow_distance="5dp"
+                app:apsv_shadow_angle="90"
+                app:apsv_shadow_radius="10dp"
+                app:apsv_shadow_color="#000"
+                app:apsv_animation_duration="1000"
+                app:apsv_interpolator="@android:anim/bounce_interpolator"
+                app:apsv_draw_width="75%"
+                app:apsv_model_offset="5dp"
+                app:apsv_model_bg_enabled="true"
+                app:apsv_start_angle="270"
+                app:apsv_sweep_angle="360"
+                app:apsv_indicator_orientation="vertical"
+                app:apsv_preview_colors="@array/default_preview"
+                app:apsv_preview_bg="#ccc"/>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_elevation"
+            android:layout_marginLeft="@dimen/card_elevation"
+            android:layout_marginTop="@dimen/card_elevation_min"
+            app:cardCornerRadius="@dimen/card_elevation_min"
+            app:cardElevation="@dimen/card_elevation_min"
+            app:layout_constraintStart_toStartOf="@id/crd_progress_1"
+            app:layout_constraintTop_toBottomOf="@id/crd_progress">
+
+            <TextView
+                android:background="@color/cardview_shadow_end_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demand"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic|bold"
+                android:textSize="25sp" />
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

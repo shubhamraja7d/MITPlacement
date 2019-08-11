@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_degree_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degree"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <EditText
+            android:id="@+id/et_degree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Degree"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_completion_show"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_degree_show" />
+
+        <TextView
+            android:id="@+id/text_view_completion_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_degree"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_percentage_show"
+            android:text="Completion Year"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/text_view_percentage_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@+id/text_view_completion_show"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_degree"
+            />
+        <EditText
+            android:id="@+id/et_complete_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:hint="year"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/et_percentage"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_completion_show"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_percentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Percentage"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/et_complete_year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_percentage_show" />
+
+        <TextView
+            android:id="@+id/text_view_college_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_complete_year"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_university_show"
+            android:text="School/College"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/text_view_university_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="University/Board"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@+id/text_view_college_show"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_percentage"
+            />
+        <EditText
+            android:id="@+id/et_college"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="School/College"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/et_univ"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_college_show" />
+
+        <EditText
+            android:id="@+id/et_univ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:hint="Board/University"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/et_college"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_university_show" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

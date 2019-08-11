@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/crd_placement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_elevation_min"
+            app:cardCornerRadius="@dimen/card_elevation_min"
+            app:cardElevation="@dimen/card_elevation_min"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_add_placement_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Placement"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_placement_date_show"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_elevation_min"
+                    android:hint="@string/enter_placement_date"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_add_placement_banner">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/text_input_placement_date"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_placement_name_show"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_elevation_min"
+                    android:hint="Enter Company Name"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_placement_date_show">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/text_input_placement_name"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_height="match_parent" />
+                </android.support.design.widget.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chk_java"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="C/C++/Java"
+                    app:layout_constraintEnd_toStartOf="@id/chk_database"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_input_placement_name_show" />
+
+                <CheckBox
+                    android:id="@+id/chk_networking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Networking"
+                    app:layout_constraintEnd_toStartOf="@id/chk_ai"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chk_java" />
+
+                <CheckBox
+                    android:id="@+id/chk_database"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Database"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/chk_java"
+                    app:layout_constraintTop_toBottomOf="@id/text_input_placement_name_show" />
+
+                <CheckBox
+                    android:id="@+id/chk_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="AI/Data Science"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/chk_networking"
+                    app:layout_constraintTop_toBottomOf="@id/chk_database" />
+
+                <Button
+                    android:id="@+id/btn_add_placement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_elevation_min"
+                    android:background="@drawable/rounded_corner"
+                    android:text="Done"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_ai" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_elevation_min"
+            app:cardElevation="@dimen/card_elevation_min"
+            android:layout_marginTop="@dimen/card_elevation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crd_placement">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_placed_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_elevation"
+                    android:text="Enter Number of Student placed"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_input_placed_show"
+                    android:layout_margin="@dimen/card_elevation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_placed_banner">
+
+                    <EditText
+                        android:id="@+id/edit_text_placed_number"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:id="@+id/btn_set_placed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_elevation_min"
+                    android:background="@drawable/rounded_corner"
+                    android:text="Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_placed_show"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
